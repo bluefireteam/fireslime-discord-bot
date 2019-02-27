@@ -1,0 +1,28 @@
+{
+  "name": "fireslime-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireslime/fireslime-discord-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fireslime/fireslime-discord-bot/issues"
+  },
+  "homepage": "https://github.com/fireslime/fireslime-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-plugin-node": "^8.0.1"
+  }
+}
