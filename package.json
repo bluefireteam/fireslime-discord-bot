@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**"
   },
@@ -19,10 +21,12 @@
   },
   "homepage": "https://github.com/fireslime/fireslime-discord-bot#readme",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
-    "eslint-plugin-node": "^8.0.1"
+    "eslint-plugin-node": "^8.0.1",
+    "nodemon": "^1.18.10"
   }
 }
