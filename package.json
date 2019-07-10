@@ -22,7 +22,8 @@
   "homepage": "https://github.com/fireslime/fireslime-discord-bot#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "eslint": "^5.14.1",

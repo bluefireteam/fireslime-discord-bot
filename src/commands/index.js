@@ -1,4 +1,4 @@
-const flameDoc = require("./flame-doc");
+const { flameSrc, flameDoc } = require("./flame");
 
 const shouldInterceptMessage = (prefix, channel, message) => {
   if (message.content.startsWith(prefix)) {
@@ -13,8 +13,14 @@ module.exports = {
     client.on("message", message => {
         if (message.content.startsWith("ping")) {
           message.reply("Pong!");
+        } else if (message.content.includes("good bot")) {
+          message.reply("Thanks master!");
+        } else if (message.content.toLowerCase().includes("thanks asimov")) {
+          message.reply("I live to serve Fireslime!");
         } else if (shouldInterceptMessage("!doc", "flame", message)) {
           flameDoc(message);
+        } else if (shouldInterceptMessage("!src", "flame", message)) {
+          flameSrc(message);
         }
       });
   }
