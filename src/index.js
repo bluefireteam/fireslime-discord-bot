@@ -14,7 +14,9 @@ const startBot = () => {
   require("dotenv").config();
   client.login(process.env.BOT_TOKEN);
   client.on("error", e => {
-    console.error("Unexpected error", e);
+    console.log("Unexpected error", e);
+    client.destroy();
+
     startBot();
   });
 }
