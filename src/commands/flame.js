@@ -14,6 +14,8 @@ Use the following links for Flame Documentation
 - The Game Loop: <https://github.com/flame-engine/flame/blob/master/doc/game.md>
 - Input: <https://github.com/flame-engine/flame/blob/master/doc/input.md>
 - Util: <https://github.com/flame-engine/flame/blob/master/doc/util.md>
+- Box2d: <https://github.com/flame-engine/flame/blob/master/doc/box2d.md>
+- Debug: <https://github.com/flame-engine/flame/blob/master/doc/debug.md>
   `);
   },
   flameSrc: message => {
