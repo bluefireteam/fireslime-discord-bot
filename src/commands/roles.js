@@ -1,3 +1,5 @@
+const permittedRoles = ["FlameUser", "AudioPlayersUser", "FireslimeGamer"];
+
 module.exports = {
   roles: message => {
     message.reply(`
@@ -17,6 +19,8 @@ Available roles:
 
     if (!role) {
       message.reply(`Can't find role "${roleName}"`);
+    } else if (permittedRoles.indexOf(roleName) == -1) {
+      message.reply(`You can't assing yourself the role "${roleName}"`);
     } else {
       message.member.addRole(role)
         .then(() => {
