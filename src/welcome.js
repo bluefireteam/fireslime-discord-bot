@@ -18,7 +18,7 @@ module.exports = {
   createWelcome: client => {
     client.on("guildMemberAdd", guildMember => {
       const channel = getChannelByName("welcome-hall", client);
-      channel.send(getWelcomeMessage(guildMember, client));
+      channel.send(`${getWelcomeMessage(guildMember, client)} \n You can also pick up roles on the #roles channel`);
     });
   }
 }

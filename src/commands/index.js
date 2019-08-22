@@ -1,4 +1,5 @@
 const { flameSrc, flameDoc } = require("./flame");
+const { roles, addRole } = require("./roles");
 
 const shouldInterceptMessage = (prefix, channel, message) => {
   if (message.content.startsWith(prefix)) {
@@ -13,7 +14,7 @@ module.exports = {
     client.on("message", message => {
         if (message.content.startsWith("ping")) {
           message.reply("Pong!");
-        } else if (message.content.includes("good bot")) {
+        } else if (message.content.toLowerCase().includes("good bot")) {
           message.reply("Thanks master!");
         } else if (message.content.toLowerCase().includes("thanks asimov")) {
           message.reply("I live to serve Fireslime!");
@@ -21,6 +22,10 @@ module.exports = {
           flameDoc(message);
         } else if (shouldInterceptMessage("!src", "flame", message)) {
           flameSrc(message);
+        } else if (shouldInterceptMessage("!role", "roles", message)) {
+          roles(message);
+        } else if (shouldInterceptMessage("!set-role", "roles", message)) {
+          addRole(message);
         }
       });
   }
